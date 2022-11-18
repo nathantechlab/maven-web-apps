@@ -1,4 +1,4 @@
-- hosts: kubernetes 
+- hosts: docker
   tasks:
   - name: copy deployfile
     copy: src=app.yaml dest=/home/ubuntu
