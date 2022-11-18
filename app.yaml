@@ -12,7 +12,7 @@ spec:
         name: javawebapp
     spec:
       containers:
-      - image: engineer120/tesla
+      - image: engineer120/tesla:v1
         name: javawebapp
         ports:
         - name: javawebapp
