@@ -1,0 +1,18 @@
+- hosts: docker
+  tasks:
+  - name: copy dockerfile into docker 
+    copy:
+      src: Dockerfile
+      dest: /home/ubuntu
+  - name:
+    copy:
+      src: target
+      dest: /home/ubuntu
+  - name: build docker image
+    shell: docker build -t engineer120/tesla:v1 .     
+  - name: login to dockerhub
+    shell: docker login -u engineer120 -p Dimonekene12
+  - name : push image to image registry
+    shell: docker push engineer120/tesla:v1
+  - name: delete image
+    shell: docker rmi -f egineer120/tesla:v1
