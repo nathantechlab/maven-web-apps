@@ -12,7 +12,7 @@ spec:
         name: javawebapp
     spec:
       containers:
-      - image: mylandmarktech/java-web-app
+      - image: engineer120/tesla
         name: javawebapp
         ports:
         - name: javawebapp
