@@ -1,0 +1,6 @@
+- hosts: kubernetes 
+  tasks:
+  - name: copy deployfile
+    copy: src=app.yaml dest=/home/ubuntu
+  - name: deploy-app
+    shell: kubectl apply -f /home/ubuntu/app.yaml
